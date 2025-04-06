@@ -1,3 +1,5 @@
+import { CampaignData } from '@/types/types'
+
 // Pre-populated dropdown list of towns
 export const towns: string[] = [
     'New York',
@@ -24,15 +26,6 @@ export const keywords: string[] = [
 export const MIN_BID_AMOUNT = 5.0
 
 // Mock data for campaign-related information
-export interface CampaignData {
-    campaignName: string
-    keywords: (typeof keywords)[number][] // Array of keywords
-    bidAmount: number
-    campaignFund: number
-    status: 'on' | 'off'
-    town: (typeof towns)[number]
-    radius: number // In kilometers
-}
 
 export const mockCampaignData: CampaignData[] = [
     {
