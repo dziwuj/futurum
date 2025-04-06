@@ -26,7 +26,6 @@ export const keywords: string[] = [
 export const MIN_BID_AMOUNT = 5.0
 
 // Mock data for campaign-related information
-
 export const mockCampaignData: CampaignData[] = [
     {
         campaignName: 'Summer Sale Campaign',
