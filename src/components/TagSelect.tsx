@@ -5,11 +5,16 @@ import '@/styles/TagSelect.scss'
 
 interface TagSelectProps {
     predefinedTags: string[]
+    selectedTags?: string[]
     setSelectedTags: (tags: string[]) => void
 }
 
-const TagSelect: FC<TagSelectProps> = ({ predefinedTags, setSelectedTags }) => {
-    const [tags, setTags] = useState<string[]>([])
+const TagSelect: FC<TagSelectProps> = ({
+    predefinedTags,
+    setSelectedTags,
+    selectedTags,
+}) => {
+    const [tags, setTags] = useState<string[]>(selectedTags || [])
     const [inputValue, setInputValue] = useState('')
     const [suggestions, setSuggestions] = useState<string[]>(predefinedTags)
     const [showSuggestions, setShowSuggestions] = useState<boolean>(false)
