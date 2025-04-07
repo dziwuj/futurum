@@ -29,6 +29,12 @@
     }
 
     .tag {
+        background-color: #f39c12;
+        color: #fff;
+        padding: 5px 10px;
+        border-radius: 20px;
+        font-size: 14px;
+
         &-container {
             display: flex;
             justify-content: center;
@@ -36,11 +42,5 @@
             flex-wrap: wrap;
             gap: 5px;
         }
-
-        background-color: #f39c12;
-        color: #fff;
-        padding: 5px 10px;
-        border-radius: 20px;
-        font-size: 14px;
     }
 }
