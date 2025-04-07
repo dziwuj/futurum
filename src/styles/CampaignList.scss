@@ -27,20 +27,4 @@
     tr:nth-child(odd) {
         background-color: #828282;
     }
-
-    .tag {
-        background-color: #f39c12;
-        color: #fff;
-        padding: 5px 10px;
-        border-radius: 20px;
-        font-size: 14px;
-
-        &-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 5px;
-        }
-    }
 }
