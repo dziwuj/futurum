@@ -1,4 +1,5 @@
 export interface CampaignData {
+    id: number
     campaignName: string
     keywords: string[] // Array of keywords
     bidAmount: number

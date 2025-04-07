@@ -1,6 +1,6 @@
 import { type FC } from 'react'
 
-export const AddCampaign: FC = () => {
+export const AddCampaignScreen: FC = () => {
     return (
         <>
             <h1>AddCampaign</h1>

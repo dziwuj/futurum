@@ -1,7 +1,7 @@
 import { type FC } from 'react'
-import '@/styles/Home.scss'
+import '@/styles/HomeScreen.scss'
 
-export const Home: FC = () => {
+export const HomeScreen: FC = () => {
     return (
         <div className="home-container">
             <h1 className="home-title">

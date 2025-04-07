@@ -28,6 +28,7 @@ export const MIN_BID_AMOUNT = 5.0
 // Mock data for campaign-related information
 export const mockCampaignData: CampaignData[] = [
     {
+        id: 1,
         campaignName: 'Summer Sale Campaign',
         keywords: ['summer', 'sale', 'discount'],
         bidAmount: 5.0,
@@ -37,6 +38,7 @@ export const mockCampaignData: CampaignData[] = [
         radius: 10,
     },
     {
+        id: 2,
         campaignName: 'Winter Clearance',
         keywords: ['winter', 'clearance', 'offers'],
         bidAmount: 7.5,
@@ -46,6 +48,7 @@ export const mockCampaignData: CampaignData[] = [
         radius: 15,
     },
     {
+        id: 3,
         campaignName: 'Spring Festival',
         keywords: ['spring', 'festival', 'celebration'],
         bidAmount: 10.0,
