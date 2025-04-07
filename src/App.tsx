@@ -2,7 +2,7 @@
 import './App.css'
 import Header from './components/Header'
 import { Routes, Route, Navigate } from 'react-router'
-import { Home, Campaigns, AddCampaign } from '@/routes'
+import { Home, Campaign, AddCampaign } from '@/screens'
 
 function App() {
     // const { count, inc } = useStore()
@@ -13,7 +13,7 @@ function App() {
             <main>
                 <Routes>
                     <Route path="/" element={<Home />} />
-                    <Route path="/campaigns" element={<Campaigns />} />
+                    <Route path="/campaigns" element={<Campaign />} />
                     <Route path="/addCampaign" element={<AddCampaign />} />
                     <Route path="*" element={<Navigate replace to="/" />} />
                 </Routes>
