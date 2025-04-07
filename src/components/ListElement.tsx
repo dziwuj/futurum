@@ -6,12 +6,16 @@ import xmarkSvg from '@/assets/circle-xmark-solid.svg'
 import editSvg from '@/assets/pen-to-square-solid.svg'
 import deleteSvg from '@/assets/trash-solid.svg'
 import '@/styles/ListElement.scss'
+import Tag from './Tag'
+
+import { useStore } from '@/store/Root.store'
 
 interface ListElementProps {
     campaignData: CampaignData
 }
 
 export const ListElement: FC<ListElementProps> = ({ campaignData }) => {
+    const { removeCampaign } = useStore()
     return (
         <tr className="list-element">
             <td>{campaignData.id}</td>
@@ -19,11 +23,7 @@ export const ListElement: FC<ListElementProps> = ({ campaignData }) => {
             <td>
                 <div className="tag-container">
                     {campaignData.keywords.map((tag) => {
-                        return (
-                            <span key={tag} className="tag">
-                                {tag}
-                            </span>
-                        )
+                        return <Tag key={tag} text={tag} />
                     })}
                 </div>
             </td>
@@ -39,10 +39,18 @@ export const ListElement: FC<ListElementProps> = ({ campaignData }) => {
             <td>{campaignData.town}</td>
             <td>{campaignData.radius} km</td>
             <td>
-                <Icon src={editSvg} title="editSvg" size={32} />
+                <button className="edit-button" title="Edit" onClick={() => {}}>
+                    <Icon src={editSvg} title="editSvg" size={32} />
+                </button>
             </td>
             <td>
-                <Icon src={deleteSvg} title="deleteSvg" size={32} />
+                <button
+                    className="delete-button"
+                    title="Delete"
+                    onClick={() => removeCampaign(campaignData.id)}
+                >
+                    <Icon src={deleteSvg} title="deleteSvg" size={32} />
+                </button>
             </td>
         </tr>
     )

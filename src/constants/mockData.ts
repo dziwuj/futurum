@@ -30,7 +30,14 @@ export const mockCampaignData: CampaignData[] = [
     {
         id: 1,
         campaignName: 'Summer Sale Campaign',
-        keywords: ['summer', 'sale', 'discount'],
+        keywords: [
+            'summer',
+            'sale',
+            'discount',
+            'offers',
+            'clearance',
+            'spring',
+        ],
         bidAmount: 5.0,
         campaignFund: 100.0,
         status: 'on',
