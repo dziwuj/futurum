@@ -1,7 +1,8 @@
-import { useEffect, useState, type FC } from 'react'
+import { useState, type FC } from 'react'
 import { useStore } from '@/store/Root.store'
 import { CampaignData } from '@/types/types'
 import TagInput from '@/components/TagSelect'
+import '@/styles/AddCampaignScreen.scss'
 
 export const AddCampaignScreen: FC = () => {
     const { towns, keywords, addCampaign } = useStore()
@@ -34,48 +35,64 @@ export const AddCampaignScreen: FC = () => {
     }
 
     return (
-        <>
-            <form onSubmit={handleSubmit}>
-                <div>
+        <div className="add-campaign-form-container">
+            <form onSubmit={handleSubmit} className="add-campaign-form">
+                <div className="add-campaign-form-group">
                     <label htmlFor="campaignName">Campaign Name:</label>
                     <input
+                        className="add-campaign-form-input"
                         type="text"
                         id="campaignName"
                         name="campaignName"
                         required
                     />
                 </div>
-                <TagInput
-                    key={selectedTags.length}
-                    selectedTags={selectedTags}
-                    predefinedTags={keywords}
-                    setSelectedTags={setSelectedTags}
-                />
-                <div>
+                <div className="add-campaign-form-group">
+                    <label htmlFor="keywords">Keywords:</label>
+                    <TagInput
+                        key={selectedTags.length}
+                        selectedTags={selectedTags}
+                        predefinedTags={keywords}
+                        setSelectedTags={setSelectedTags}
+                    />
+                </div>
+                <div className="add-campaign-form-group">
                     <label htmlFor="bidAmount">Bid amount:</label>
                     <input
+                        className="add-campaign-form-input"
                         type="number"
                         id="bidAmount"
                         name="bidAmount"
                         required
                     />
                 </div>
-                <div>
+                <div className="add-campaign-form-group">
                     <label htmlFor="campaignFund">Campaign fund:</label>
                     <input
+                        className="add-campaign-form-input"
                         type="number"
                         id="campaignFund"
                         name="campaignFund"
                         required
                     />
                 </div>
-                <div>
+                <div className="add-campaign-form-group">
                     <label htmlFor="status">Status:</label>
-                    <input type="checkbox" id="status" name="status" />
+                    <input
+                        className="add-campaign-form-input"
+                        type="checkbox"
+                        id="status"
+                        name="status"
+                    />
                 </div>
-                <div>
-                    <label htmlFor="town">Town:</label>
-                    <select id="town" name="town" defaultValue={'-'}>
+                <div className="add-campaign-form-group">
+                    <label htmlFor="town">Town (optional):</label>
+                    <select
+                        className="add-campaign-form-input"
+                        id="town"
+                        name="town"
+                        defaultValue={'-'}
+                    >
                         <option value="-"></option>
                         {towns.map((town: string) => (
                             <option key={town} value={town}>
@@ -84,12 +101,20 @@ export const AddCampaignScreen: FC = () => {
                         ))}
                     </select>
                 </div>
-                <div>
-                    <label htmlFor="radius">Radius:</label>
-                    <input type="number" id="radius" name="radius" required />
+                <div className="add-campaign-form-group">
+                    <label htmlFor="radius">Radius (in km):</label>
+                    <input
+                        className="add-campaign-form-input"
+                        type="number"
+                        id="radius"
+                        name="radius"
+                        required
+                    />
                 </div>
-                <button type="submit">Add Campaign</button>
+                <button type="submit" className="add-campaign-form-button">
+                    Add Campaign
+                </button>
             </form>
-        </>
+        </div>
     )
 }

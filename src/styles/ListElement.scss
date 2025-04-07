@@ -1,7 +1,13 @@
 .list-element {
+    color: white;
     .tag-container {
         display: flex;
         flex-wrap: wrap;
         gap: 8px;
+    }
+
+    button {
+        all: unset;
+        cursor: pointer;
     }
 }

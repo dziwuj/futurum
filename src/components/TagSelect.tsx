@@ -75,6 +75,8 @@ const TagSelect: FC<TagSelectProps> = ({
             ))}
             <div className="tag-select-input-container">
                 <input
+                    id="keywords"
+                    name="keywords"
                     className="tag-select-input"
                     type="text"
                     value={inputValue}
