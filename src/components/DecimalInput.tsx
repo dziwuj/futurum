@@ -8,13 +8,14 @@ export const DecimalInput: FC<React.InputHTMLAttributes<HTMLInputElement>> = (
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         if (onChange) {
             onChange(e)
-            console.log(e.target.value)
         }
         const val = e.target.value
 
         if (val === '' || /^\d*\.?\d{0,2}$/.test(val)) {
             e.target.value = val
         }
+
+        e.target.value = e.target.value.replace(',', '.')
     }
 
     return (
