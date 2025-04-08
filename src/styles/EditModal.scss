@@ -1,0 +1,68 @@
+.edit-campaign-form {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #707070;
+    color: #000;
+
+    &-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &-group {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        label {
+            font-size: 18px;
+            color: #fff;
+        }
+    }
+
+    &-input {
+        padding: 10px;
+        border-radius: 5px;
+        border: 2px solid #ccc;
+        font-size: 16px;
+
+        &:focus {
+            outline: none;
+            border: 2px solid #f39c12;
+        }
+    }
+
+    input[type='checkbox'] {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+
+        &:checked {
+            outline: 2px solid #f39c12;
+            outline-offset: -1px;
+        }
+    }
+
+    &-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 20px;
+        border-radius: 5px;
+        background-color: #f39c12;
+        color: white;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #e67e22;
+        }
+    }
+}

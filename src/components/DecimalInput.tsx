@@ -1,11 +1,11 @@
-import { ChangeEvent, type FC } from 'react'
+import { type FC } from 'react'
 
 export const DecimalInput: FC<React.InputHTMLAttributes<HTMLInputElement>> = (
     props
 ) => {
     const { onChange, ...rest } = props
 
-    const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         if (onChange) {
             onChange(e)
             console.log(e.target.value)

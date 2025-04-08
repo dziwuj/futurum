@@ -1,4 +1,4 @@
-import { ChangeEvent, useState, type FC } from 'react'
+import { useState, type FC } from 'react'
 import { useStore } from '@/store/Root.store'
 import { CampaignData } from '@/types/types'
 import { TagSelect } from '@/components/TagSelect'
@@ -85,7 +85,7 @@ export const AddCampaignScreen: FC = () => {
                             minBidAmount > 0 ? minBidAmount : 0
                         })`}
                         required
-                        onChange={(e: ChangeEvent<HTMLInputElement>) => {
+                        onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
                             setBidAmount(Number(e.target.value))
                             const value = Number(e.target.value)
 
@@ -104,7 +104,7 @@ export const AddCampaignScreen: FC = () => {
                         placeholder={`Enter campaign fund (max $${emeraldFunds})`}
                         required
                         min={0}
-                        onChange={(e: ChangeEvent<HTMLInputElement>) => {
+                        onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
                             //max value is emeraldFunds
                             const value = Number(e.target.value)
                             if (value > emeraldFunds)
