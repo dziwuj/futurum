@@ -9,7 +9,7 @@ export const CampaignList: FC = () => {
 
     return (
         <div className="campaign-list-table-container">
-            {campaignList.lenght > 0 &&
+            {campaignList.length > 0 &&
             (<table className="campaign-list-table">
                 <thead>
                     <tr>
