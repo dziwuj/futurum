@@ -33,4 +33,24 @@ header {
             }
         }
     }
+
+    .emerald-funds {
+        display: flex;
+        align-items: center;
+        font-size: 1rem;
+        gap: 0.5rem;
+
+        &-title {
+            color: #f39c12;
+            margin-right: 0.5rem;
+            width: fit-content;
+        }
+
+        button {
+            all: unset;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+    }
 }

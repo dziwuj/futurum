@@ -6,7 +6,7 @@ import xmarkSvg from '@/assets/circle-xmark-solid.svg'
 import editSvg from '@/assets/pen-to-square-solid.svg'
 import deleteSvg from '@/assets/trash-solid.svg'
 import '@/styles/ListElement.scss'
-import Tag from './Tag'
+import { Tag } from './Tag'
 
 import { useStore } from '@/store/Root.store'
 

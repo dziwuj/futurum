@@ -1,5 +1,5 @@
-import React, { RefObject, useEffect, useState, type FC } from 'react'
-import Tag from './Tag'
+import { RefObject, useEffect, useState, type FC } from 'react'
+import { Tag } from './Tag'
 import { useOutsideClick } from '@/hooks/useOutsideClick'
 import '@/styles/TagSelect.scss'
 
@@ -9,7 +9,7 @@ interface TagSelectProps {
     setSelectedTags: (tags: string[]) => void
 }
 
-const TagSelect: FC<TagSelectProps> = ({
+export const TagSelect: FC<TagSelectProps> = ({
     predefinedTags,
     setSelectedTags,
     selectedTags,
@@ -112,5 +112,3 @@ const TagSelect: FC<TagSelectProps> = ({
         </div>
     )
 }
-
-export default TagSelect
