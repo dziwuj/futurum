@@ -9,7 +9,8 @@ export const CampaignList: FC = () => {
 
     return (
         <div className="campaign-list-table-container">
-            <table className="campaign-list-table">
+            {campaignList.lenght > 0 &&
+            (<table className="campaign-list-table">
                 <thead>
                     <tr>
                         {Object.keys(campaignList[0]).map((key) => (
@@ -26,7 +27,7 @@ export const CampaignList: FC = () => {
                         <ListElement key={index} campaignData={campaign} />
                     ))}
                 </tbody>
-            </table>
+            </table>)}
         </div>
     )
 }
