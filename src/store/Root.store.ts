@@ -6,20 +6,7 @@ import {
     minBidAmount,
     emeraldFunds,
 } from '@/constants/mockData'
-import { CampaignData } from '@/types/types'
-
-type Store = {
-    campaignList: CampaignData[]
-    setCampaignList: (campaignList: CampaignData[]) => void
-    addCampaign: (campaign: CampaignData) => void
-    removeCampaign: (id: number) => void
-    updateCampaign: (updatedCampaign: CampaignData) => void
-    towns: string[]
-    keywords: string[]
-    minBidAmount: number
-    emeraldFunds: number
-    setEmeraldFunds: (newFunds: number) => void
-}
+import { type Store } from '@/types/types'
 
 const useStore = create<Store>()((set) => ({
     campaignList: mockCampaignData,
@@ -45,4 +32,4 @@ const useStore = create<Store>()((set) => ({
     setEmeraldFunds: (emeraldFunds) => set({ emeraldFunds }),
 }))
 
-export { useStore, type Store }
+export { useStore }

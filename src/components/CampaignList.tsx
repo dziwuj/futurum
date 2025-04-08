@@ -1,6 +1,7 @@
 import { type FC } from 'react'
 import { useStore } from '@/store/Root.store'
 import { ListElement } from './ListElement'
+
 import '@/styles/CampaignList.scss'
 
 export const CampaignList: FC = () => {

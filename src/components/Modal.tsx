@@ -1,11 +1,7 @@
-import { type FC, ReactNode } from 'react'
-import '@/styles/Modal.scss'
+import { type FC } from 'react'
+import { type ModalProps } from '@/types/types'
 
-interface ModalProps {
-    isOpen: boolean
-    onClose: () => void
-    children: ReactNode
-}
+import '@/styles/Modal.scss'
 
 export const Modal: FC<ModalProps> = ({ isOpen, onClose, children }) => {
     if (!isOpen) return null

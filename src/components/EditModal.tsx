@@ -1,16 +1,12 @@
 import { useState, type FC } from 'react'
 import { CampaignData } from '@/types/types'
-import '@/styles/EditModal.scss'
 import { useStore } from '@/store/Root.store'
 import { Modal } from '@/components/Modal'
 import { TagSelect } from '@/components/TagSelect'
 import { DecimalInput } from '@/components/DecimalInput'
+import { type EditModalProps } from '@/types/types'
 
-interface EditModalProps {
-    isOpen: boolean
-    onClose: () => void
-    campaignData: CampaignData
-}
+import '@/styles/EditModal.scss'
 
 export const EditModal: FC<EditModalProps> = ({
     isOpen,

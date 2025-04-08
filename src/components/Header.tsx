@@ -2,8 +2,10 @@ import { useState, type FC } from 'react'
 import { Link, useLocation } from 'react-router'
 import { useStore } from '@/store/Root.store'
 import { Icon } from '@/components/Icon'
+
 import PlusIcon from '@/assets/circle-plus-solid.svg'
 import Burger from '@/assets/bars-solid.svg'
+
 import '@/styles/Header.scss'
 
 const Header: FC = () => {

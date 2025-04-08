@@ -1,4 +1,5 @@
 import { type FC } from 'react'
+
 import '@/styles/HomeScreen.scss'
 
 export const HomeScreen: FC = () => {

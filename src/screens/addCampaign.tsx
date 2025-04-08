@@ -2,8 +2,9 @@ import { useState, type FC } from 'react'
 import { useStore } from '@/store/Root.store'
 import { CampaignData } from '@/types/types'
 import { TagSelect } from '@/components/TagSelect'
-import '@/styles/AddCampaignScreen.scss'
 import { DecimalInput } from '@/components/DecimalInput'
+
+import '@/styles/AddCampaignScreen.scss'
 
 export const AddCampaignScreen: FC = () => {
     const {

@@ -1,12 +1,10 @@
-// import { useStore } from './store/Root.store'
-import './App.css'
-import Header from './components/Header'
 import { Routes, Route, Navigate } from 'react-router'
 import { Home, Campaign, AddCampaign } from '@/screens'
+import Header from './components/Header'
+
+import './App.css'
 
 function App() {
-    // const { count, inc } = useStore()
-
     return (
         <>
             <Header />

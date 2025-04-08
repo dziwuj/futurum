@@ -1,19 +1,17 @@
 import { useState, type FC } from 'react'
-import { CampaignData } from '@/types/types'
 import { Icon } from '@/components/Icon'
-import checkSvg from '@/assets/circle-check-solid.svg'
-import xmarkSvg from '@/assets/circle-xmark-solid.svg'
-import editSvg from '@/assets/pen-to-square-solid.svg'
-import deleteSvg from '@/assets/trash-solid.svg'
-import '@/styles/ListElement.scss'
 import { Tag } from './Tag'
 import { useStore } from '@/store/Root.store'
 import { createPortal } from 'react-dom'
 import { EditModal } from '@/components/EditModal'
+import { type ListElementProps } from '@/types/types'
 
-interface ListElementProps {
-    campaignData: CampaignData
-}
+import checkSvg from '@/assets/circle-check-solid.svg'
+import xmarkSvg from '@/assets/circle-xmark-solid.svg'
+import editSvg from '@/assets/pen-to-square-solid.svg'
+import deleteSvg from '@/assets/trash-solid.svg'
+
+import '@/styles/ListElement.scss'
 
 export const ListElement: FC<ListElementProps> = ({ campaignData }) => {
     const { removeCampaign } = useStore()

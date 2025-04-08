@@ -1,13 +1,9 @@
 import { RefObject, useEffect, useState, type FC } from 'react'
+import { type TagSelectProps } from '@/types/types'
 import { Tag } from './Tag'
 import { useOutsideClick } from '@/hooks/useOutsideClick'
-import '@/styles/TagSelect.scss'
 
-interface TagSelectProps {
-    predefinedTags: string[]
-    selectedTags?: string[]
-    setSelectedTags: (tags: string[]) => void
-}
+import '@/styles/TagSelect.scss'
 
 export const TagSelect: FC<TagSelectProps> = ({
     predefinedTags,

@@ -1,10 +1,7 @@
 import { type FC } from 'react'
-import '@/styles/Tag.scss'
+import { type TagProps } from '@/types/types'
 
-interface TagProps {
-    text: string
-    onRemove?: () => void
-}
+import '@/styles/Tag.scss'
 
 export const Tag: FC<TagProps> = ({ text, onRemove }) => {
     return (
