@@ -5,6 +5,7 @@ export const useOutsideClick = (callback: () => void) => {
 
     useEffect(() => {
         const handleClick = (event: MouseEvent) => {
+            console.log(ref.current, event.target)
             if (
                 ref.current &&
                 !ref.current.contains(event.target as HTMLElement)
@@ -13,10 +14,10 @@ export const useOutsideClick = (callback: () => void) => {
             }
         }
 
-        document.addEventListener('click', handleClick)
+        document.addEventListener('mousedown', handleClick)
 
         return () => {
-            document.removeEventListener('click', handleClick)
+            document.removeEventListener('mousedown', handleClick)
         }
     }, [ref, callback])
 

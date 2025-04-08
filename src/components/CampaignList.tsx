@@ -4,7 +4,7 @@ import { ListElement } from './ListElement'
 import '@/styles/CampaignList.scss'
 
 export const CampaignList: FC = () => {
-    const campaignList = useStore((state) => state.campaignList)
+    const { campaignList } = useStore()
 
     return (
         <div className="campaign-list-table-container">
