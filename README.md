@@ -19,21 +19,31 @@ The **Campaign Management System** is a React-based web application designed to 
 -   **Build Tool**: Vite
 -   **TypeScript**: Strongly typed codebase for better maintainability.
 
+## Online Demo
+
+You can also view a live demo of the Campaign Management System at https://futurum-nine.vercel.app.
+
 ## Installation
 
 1. Clone the repository:
+
     ```bash
     git clone https://github.com/dziwuj/futurum
     cd futurum
     ```
+
 2. Install dependencies:
+
     ```bash
     yarn
     ```
+
 3. Start the development server:
+
     ```bash
     yarn dev
     ```
+
 4. Open your browser and navigate to `http://localhost:5173`
 
 ## Scripts
