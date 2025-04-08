@@ -1,8 +1,9 @@
-import { type FC } from 'react'
+import { useState, type FC } from 'react'
 import { Link, useLocation } from 'react-router'
 import { useStore } from '@/store/Root.store'
 import { Icon } from '@/components/Icon'
 import PlusIcon from '@/assets/circle-plus-solid.svg'
+import Burger from '@/assets/bars-solid.svg'
 import '@/styles/Header.scss'
 
 const Header: FC = () => {
@@ -11,17 +12,40 @@ const Header: FC = () => {
         location.pathname === path ? 'active' : ''
 
     const { emeraldFunds, setEmeraldFunds } = useStore()
+    const [showNav, setShowNav] = useState<boolean>(false)
 
     return (
-        <header>
+        <header className={showNav ? 'nav-open' : ''}>
+            <div className="burger-container">
+                <button
+                    type="button"
+                    className="burger-button"
+                    title="Menu"
+                    onClick={() => setShowNav(!showNav)}
+                >
+                    <Icon title="Navigaion" src={Burger} size={30} />
+                </button>
+            </div>
             <nav>
-                <Link to="/" className={isActive('/')}>
+                <Link
+                    to="/"
+                    className={isActive('/')}
+                    onClick={() => setShowNav(false)}
+                >
                     Home
                 </Link>
-                <Link to="/campaigns" className={isActive('/campaigns')}>
+                <Link
+                    to="/campaigns"
+                    className={isActive('/campaigns')}
+                    onClick={() => setShowNav(false)}
+                >
                     Campaigns
                 </Link>
-                <Link to="/addCampaign" className={isActive('/addCampaign')}>
+                <Link
+                    to="/addCampaign"
+                    className={isActive('/addCampaign')}
+                    onClick={() => setShowNav(false)}
+                >
                     Add Campaign
                 </Link>
             </nav>
