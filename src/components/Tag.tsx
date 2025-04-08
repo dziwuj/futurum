@@ -1,4 +1,4 @@
-import React from 'react'
+import { type FC } from 'react'
 import '@/styles/Tag.scss'
 
 interface TagProps {
@@ -6,7 +6,7 @@ interface TagProps {
     onRemove?: () => void
 }
 
-const Tag: React.FC<TagProps> = ({ text, onRemove }) => {
+export const Tag: FC<TagProps> = ({ text, onRemove }) => {
     return (
         <div className="tag">
             <span>{text}</span>
@@ -22,5 +22,3 @@ const Tag: React.FC<TagProps> = ({ text, onRemove }) => {
         </div>
     )
 }
-
-export default Tag

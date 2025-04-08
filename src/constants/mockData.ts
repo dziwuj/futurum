@@ -23,7 +23,9 @@ export const keywords: string[] = [
 ]
 
 // Minimum bid amount
-export const MIN_BID_AMOUNT = 5.0
+export const minBidAmount: number = 5.0
+
+export const emeraldFunds: number = 1000.0
 
 // Mock data for campaign-related information
 export const mockCampaignData: CampaignData[] = [
